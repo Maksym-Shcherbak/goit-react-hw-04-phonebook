@@ -9,7 +9,9 @@ export const App = () => {
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(contacts));
+    if (contacts.length > 0) {
+      localStorage.setItem('contacts', JSON.stringify(contacts));
+    }
   }, [contacts]);
 
   useEffect(() => {
