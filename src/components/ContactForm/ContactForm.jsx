@@ -23,6 +23,8 @@ export const ContactForm = ({ onAddContact }) => {
       case 'number':
         setNumber(value);
         break;
+      default:
+        return;
     }
   };
 
